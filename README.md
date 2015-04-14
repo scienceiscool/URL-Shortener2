@@ -4,8 +4,8 @@
 __Prompt:__ Rewrite portions of your URL shortener from Assignment 7 to use MongoDB instead of Redis. You may use either Mongoose or the standard MongoDB API.
 
 _Tips:_<br>
-- The difficulty of this assignment will depend on whether you successfully completed the previous assignment and how well you designed your solution
-- Consider using a MongoDB capped collection for the top-ten list
+- The difficulty of this assignment will depend on whether you successfully completed the previous assignment and how well you designed your solution.
+- Consider using a MongoDB capped collection for the top-ten list.
 - You may find that MongoDB is particularly well-suited to creating Web Service API-style applications. If you created a more traditional dynamically-generated HTML application for the previous assignment, consider alternative designs.
 
 __Status:__ Under construction
