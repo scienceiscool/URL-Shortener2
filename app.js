@@ -13,6 +13,10 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
+
+// reference for the following:
+// http://javascriptplayground.com/blog/2012/04/node-js-a-todo-app-with-express/
+//var routes = require('./routes');
 var port = process.env.PORT || 3000;
 
 // inspiration for the following three blocks from:
@@ -32,13 +36,29 @@ var Url = mongoose.model('Url', urlSchema, 'url');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
-app.get('/', routes.index);
+// routes
+app.get('/', function (req, res) {
+ res.render('index', { title: 'URL Shortener. Dig it.' });
+});
+
+app.post('/converted', function (req, res) {
+  // trying to pass in the url from index.jade's form,
+  // tried googling the issue - took way too much time, no success :-(
+  // passing data between jade files has also been very difficult...
+  // all i wanted to do was print the entered url......
+  res.render('converted', { title: 'URL Converted', url: req.url });
+});
+
+app.listen(port);
+console.log('Magic happening on port ' + port);
+
+// reference for the following:
+// http://javascriptplayground.com/blog/2012/04/node-js-a-todo-app-with-express/
+//app.get('/', routes.index);
+//app.post('/converted', routes.converted);
 
 /*app.get('/', function (req, res) {
   Url.find(function (err, doc) {
     res.send(doc);
   });
 });*/
-
-app.listen(port);
-console.log('Magic happening on port ' + port);
