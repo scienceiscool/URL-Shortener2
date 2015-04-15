@@ -13,3 +13,4 @@ __Status:__ Under construction
 __References for views/*.jade:__<br>
 - <a href="http://javascriptplayground.com/blog/2012/06/node-express-todo-app-redis/">JavaScript Playground > Node and Express Todo App: Redis</a>
 - <a href="http://technotip.com/3837/forms-using-jade-node-js/">Techno Tip > Forms Using Jade: Node.js</a>
+- <a href="http://www.lynda.com/JavaScript-tutorials/Generating-HTML-views-Jade/141132/152190-4.html">Lynda > Node.js Essential Training</a>
